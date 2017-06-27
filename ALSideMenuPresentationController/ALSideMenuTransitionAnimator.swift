@@ -26,7 +26,7 @@ open class ALSideMenuTransitionAnimator: NSObject, UIViewControllerAnimatedTrans
         if isPresenting {
             animatePresentationTransition(using: transitionContext)
         } else {
-            animatePresentationTransition(using: transitionContext)
+            animateDismissalTransition(using: transitionContext)
         }
     }
     
