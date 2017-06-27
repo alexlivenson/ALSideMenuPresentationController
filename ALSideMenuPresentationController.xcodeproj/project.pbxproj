@@ -10,6 +10,8 @@
 		7FC9F9861F02F3A6004C5931 /* ALSideMenuPresentationController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC9F97C1F02F3A6004C5931 /* ALSideMenuPresentationController.framework */; };
 		7FC9F98B1F02F3A6004C5931 /* ALSideMenuPresentationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9F98A1F02F3A6004C5931 /* ALSideMenuPresentationControllerTests.swift */; };
 		7FC9F98D1F02F3A6004C5931 /* ALSideMenuPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC9F97F1F02F3A6004C5931 /* ALSideMenuPresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FC9F9971F02F445004C5931 /* ALSideMenuPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9F9961F02F445004C5931 /* ALSideMenuPresentationController.swift */; };
+		7FC9F9991F02F781004C5931 /* ALSideMenuTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC9F9981F02F781004C5931 /* ALSideMenuTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		7FC9F9851F02F3A6004C5931 /* ALSideMenuPresentationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ALSideMenuPresentationControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC9F98A1F02F3A6004C5931 /* ALSideMenuPresentationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALSideMenuPresentationControllerTests.swift; sourceTree = "<group>"; };
 		7FC9F98C1F02F3A6004C5931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FC9F9961F02F445004C5931 /* ALSideMenuPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSideMenuPresentationController.swift; sourceTree = "<group>"; };
+		7FC9F9981F02F781004C5931 /* ALSideMenuTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSideMenuTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				7FC9F97F1F02F3A6004C5931 /* ALSideMenuPresentationController.h */,
 				7FC9F9801F02F3A6004C5931 /* Info.plist */,
+				7FC9F9961F02F445004C5931 /* ALSideMenuPresentationController.swift */,
+				7FC9F9981F02F781004C5931 /* ALSideMenuTransitionAnimator.swift */,
 			);
 			path = ALSideMenuPresentationController;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 					7FC9F97B1F02F3A6004C5931 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = QHH657A9UF;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					7FC9F9841F02F3A6004C5931 = {
@@ -198,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC9F9991F02F781004C5931 /* ALSideMenuTransitionAnimator.swift in Sources */,
+				7FC9F9971F02F445004C5931 /* ALSideMenuPresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +333,7 @@
 		7FC9F9911F02F3A6004C5931 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QHH657A9UF;
@@ -336,6 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.livenson.ALSideMenuPresentationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +354,7 @@
 		7FC9F9921F02F3A6004C5931 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QHH657A9UF;
@@ -362,6 +374,7 @@
 		7FC9F9941F02F3A6004C5931 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QHH657A9UF;
 				INFOPLIST_FILE = ALSideMenuPresentationControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +387,7 @@
 		7FC9F9951F02F3A6004C5931 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = QHH657A9UF;
 				INFOPLIST_FILE = ALSideMenuPresentationControllerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
