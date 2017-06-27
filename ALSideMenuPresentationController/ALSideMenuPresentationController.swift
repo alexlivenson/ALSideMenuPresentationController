@@ -8,14 +8,14 @@
 
 import UIKit
 
-class ALSideMenuPresentationController: UIPresentationController {
+open class ALSideMenuPresentationController: UIPresentationController {
     
     private lazy var chromeView: UIView = self.createChromeView()
     
-    var willDismissHandler: (() -> ())?
-    var didDismissHandler: (() -> ())?
+    open var willDismissHandler: (() -> ())?
+    open var didDismissHandler: (() -> ())?
     
-    override var frameOfPresentedViewInContainerView: CGRect {
+    override open var frameOfPresentedViewInContainerView: CGRect {
         guard let cv = containerView else {
             print("Container View is nil for presentation")
             return UIScreen.main.bounds
@@ -30,7 +30,7 @@ class ALSideMenuPresentationController: UIPresentationController {
         )
     }
     
-    override func presentationTransitionWillBegin() {
+    override open func presentationTransitionWillBegin() {
         guard let cv = containerView else {
             print("Container View is nil for presentation")
             return
@@ -47,7 +47,7 @@ class ALSideMenuPresentationController: UIPresentationController {
                 completion: nil)
     }
     
-    override func dismissalTransitionWillBegin() {
+    override open func dismissalTransitionWillBegin() {
         presentedViewController
             .transitionCoordinator?
             .animate(

@@ -8,21 +8,21 @@
 
 import UIKit
 
-class ALSideMenuTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+open class ALSideMenuTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     private let isPresenting: Bool
     private let duration = 0.3
     
-    init(isPresenting: Bool) {
+    public init(isPresenting: Bool) {
         self.isPresenting = isPresenting
         super.init()
     }
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if isPresenting {
             animatePresentationTransition(using: transitionContext)
         } else {
