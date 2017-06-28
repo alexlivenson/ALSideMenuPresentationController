@@ -12,7 +12,7 @@ $ brew install carthage
 ```
 To integrate Alamofire into your Xcode project using Carthage, specify it in your Cartfile:
 ```
-github "alexlivenson/ALExtensions" ~> 1.0
+github "alexlivenson/ALSideMenuPresentationController" ~> 1.0
 ```
 Run carthage update to build the framework and drag the built ALExtensions.framework into your Xcode project.
 
