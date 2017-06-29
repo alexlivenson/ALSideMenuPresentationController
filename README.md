@@ -19,6 +19,21 @@ Run carthage update to build the framework and drag the built ALExtensions.frame
 ## How to use
 ```swift
 import ALSideMenuPresentationController
+
+class SomeViewController: UIViewController {
+     
+     let menuCtrl = AnotherController()
+
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         menuCtrl.modalPresentationStyle = .custom
+         menuCtrl.transitioningDelegate = self
+     }
+     
+     func present() {
+          present(menuCtrl, animated: true, completion: nil)
+     }
+}
 ...
 extension SomeViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
