@@ -11,10 +11,17 @@ import UIKit
 open class ALSideMenuTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     private let isPresenting: Bool
-    private let duration = 0.3
+    private let duration: TimeInterval
     
     public init(isPresenting: Bool) {
         self.isPresenting = isPresenting
+        self.duration = isPresenting ? 0.2 : 0.15
+        super.init()
+    }
+    
+    public init(isPresenting: Bool, duration: TimeInterval) {
+        self.isPresenting = isPresenting
+        self.duration = duration
         super.init()
     }
     
@@ -46,7 +53,7 @@ open class ALSideMenuTransitionAnimator: NSObject, UIViewControllerAnimatedTrans
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),
             delay: 0,
-            options: UIViewAnimationOptions.curveEaseOut,
+            options: .curveEaseOut,
             animations: { 
                 toVC.view.frame = finalFrame
             },
