@@ -59,11 +59,11 @@ open class ALSideMenuPresentationController: UIPresentationController {
                 })
     }
     
-    func dismiss() {
+    @objc func dismiss() {
         willDismissHandler?()
-        presentedViewController.dismiss(animated: true, completion: { [weak self] _ in
+        presentedViewController.dismiss(animated: true) { [weak self] in
             self?.didDismissHandler?()
-        })
+        }        
     }
     
     private func createChromeView() -> UIView {
